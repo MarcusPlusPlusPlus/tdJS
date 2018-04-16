@@ -48,12 +48,20 @@ class UsersBDD {
     constructor(rawData) {
         this.raw = rawData
     }
+    init() {
+        // Utliser une promise
+        // Utiliser un spread pour stocker les user
+    }
+    get(id) { }
+    put(user) { }
+    getByEmail(email) { }
+    getByIp(ip) { }
+    getByFirstName(firstName) { }
 }
 
 /* Testing Part */
 const TD = 'TD :: 08 '
 const usersBDD = new UsersBDD(rawData)
-
 usersBDD
     .init()
     .then(() => {

@@ -15,10 +15,27 @@ p1.add(p2) // Retourne un nouveau point ayant pour coordonées x = 3 + 4 et y = 
 p1.sub(p2) // Retourne un nouveau point ayant pour coordonées x = 3 - 4 et y = 2 - 4. Ne modifie pas p1
 */
 /* TD Part */
-
+//!\\ Pourquoi ça marche ?!
 class Point2 {
-}
-
+    constructor(x, y) {
+        this.x = x
+        this.y = y
+    }
+    add(anotherPoint) {
+        return(
+            new Point2(
+                (this.x + anotherPoint.x),
+                (this.y + anotherPoint.y))
+        )
+        }
+        sub(anotherPoint) {
+            return(
+                new Point2(
+                    (this.x - anotherPoint.x),
+                    (this.y - anotherPoint.y))
+                )
+            }
+    }
 /* Testing Part */
 const p1 = new Point2(12, 41)
 const p2 = new Point2(-12, -41)

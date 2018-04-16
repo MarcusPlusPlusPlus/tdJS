@@ -18,6 +18,17 @@ p1.add(p2) // Retourne un nouveau point ayant pour coordonées x : 4 + 3, y : 2 
 /* TD Part */
 
 class Point3 {
+    constructor(x, y, z) {
+        [this.x, this.y, this.z] = [x, y, z]
+    }
+    add(anotherPoint) {
+        return(
+            new Point3(
+                (this.x + anotherPoint.x),
+                (this.y + anotherPoint.y),
+                (this.z + anotherPoint.z))
+        )
+    }
 }
 
 /* Testing Part */

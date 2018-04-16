@@ -14,17 +14,21 @@ Enfin, il doit comporter un attribut length, retournant le nombre d'éléments c
 */
 
 let Storage = () => {
+    obj = {
+        "storage": new Map(),
+        get length() { return(this.storage.size) }
+    }
+    obj["put"] = (key, value) => { obj["storage"].set(key, value) }
+    obj["fetch"] = key => obj["storage"].get(key)
+    return(obj)
 }
-
 /* Testing Part */
 var storage = Storage()
-
 function test() {
     storage.put('test', 42)
     storage.put(42, 'test')
-    storage.put(12.01, 'ok')
+    storage.put(12.01, 'ok')    
     if (storage.length !== 3) {
-        console.log(storage.length)
         return false
     } else if (storage.fetch(42) !== 'test') {
         return false

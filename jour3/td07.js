@@ -23,6 +23,10 @@ De plus vous devrez ajouter un attribut sum retournant la somme des coordonées 
 
 class Point {    
     constructor(x, y, z=null) { // Vous pouvez modifier ce prototype TANT que les tests passent
+        [this.x, this.y, this.z] = [x, y, z]
+    }
+    get sum() {
+        return(this.z != null ? (this.x+this.y+this.z) : (this.x+this.y))
     }
 }
 

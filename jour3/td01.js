@@ -22,8 +22,7 @@ s.get(obj) // 'foobar'
 s.size // 1
 */
 
-let Storage = () => {
-}
+let Storage = () =>  new Map()
 
 /* Testing Part */
 var storage = Storage()
